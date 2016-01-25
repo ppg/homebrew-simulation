@@ -64,7 +64,7 @@ class Ogre < Formula
       "-DCMAKE_OSX_ARCHITECTURES='x86_64'",
     ]
     cmake_args << "-DOGRE_BUILD_PLUGIN_CG=OFF" if build.without? "cg"
-    cmake_args << "-DCMAKE_CXX_FLAGS -stdlib=libc++ -std=c++11"
+    cmake_args << "-DCMAKE_CXX_FLAGS='-stdlib=libc++ -std=c++11'"
     cmake_args.concat(std_cmake_args)
     cmake_args << ".."
 
